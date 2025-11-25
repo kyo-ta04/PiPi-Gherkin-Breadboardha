@@ -4,7 +4,7 @@
 RP2040 / RP2350 + CircuitPython 10 + KMK で完全動作、日本語対応済み  
 ハンダ不要・ブレッドボード1枚で30キー全部動く伝説のキーボード
 
-![完成写真](https://pbs.twimg.com/media/G6cakh9asAAFGj-?format=jpg&name=large)
+![完成写真](https://pbs.twimg.com/media/G6lMcjNbwAI47GN?format=jpg&name=large)
 
 ## 特徴
 - 30キー（3×10）PiPiGherkinレイアウト完全再現  
