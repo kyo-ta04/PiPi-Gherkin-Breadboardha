@@ -1,2 +1,59 @@
 # PiPi-Gherkin-Breadboardha
-人類には早すぎる30%キーボード「PiPiGherkin」をブレッドボードで爆速再現したやつ（ha） RP2040/RP2350 + CircuitPython 10 + KMKで完全動作、日本語対応済み
+
+**人類には早すぎる30%キーボード「PiPiGherkin」をブレッドボードで爆速再現したやつ（ha）**  
+RP2040 / RP2350 + CircuitPython 10 + KMK で完全動作、日本語対応済み  
+ハンダ不要・ブレッドボード1枚で30キー全部動く伝説のキーボード
+
+![完成写真](https://pbs.twimg.com/media/G6cakh9asAAFGj-?format=jpg&name=large)
+
+## 特徴
+- 30キー（3×10）PiPiGherkinレイアウト完全再現  
+- ハンダ不要！ミニブレッドボードで完結  
+- タクトスイッチ使用  
+- 6レイヤー（英数・記号・ファンクション・システム・日本語）  
+- 日本語入力対応  
+- RP2350 A4ステッピングでも動作確認済み  
+
+## 必要なもの
+| 部品                     | 個数 | 備考                              |
+|--------------------------|------|-----------------------------------|
+| AE-RP2040                | 1    | その他 RP2040マイコンボード         |
+| タクトスイッチ   　　　　　| 30   | 好きな色で　　                      |
+| 1N4148 ダイオード        | 30  | 50本150円とかで買える            |
+| ブレッドボード 　　      | 2    | どこの誤家庭にもあるヤツ           |
+| ジャンパー線（Dupont）   | 適量 | めっちゃ使う                      |
+
+## 回路図
+![回路図](https://pbs.twimg.com/media/G6lD8cTbwAM6QhO?format=png&name=large)
+
+## 使い方（5分で動く）
+1. RP2040に CircuitPython 10.0.3 を書き込む  
+   → https://downloads.circuitpython.org/bin/raspberry_pi_pico/ja/adafruit-circuitpython-raspberry_pi_pico-ja-10.0.3.uf2
+2. `lib` フォルダに KMK最新（Commit 5a6669d）を入れる  
+   → https://github.com/KMKfw/kmk_firmware/tree/master/kmk
+3. `code.py`  をルートにコピー
+4. ブレッドボードにスイッチとダイオードを刺す
+5. USB挿す → 即キーボード認識！
+
+## ファイル構成
+```
+PiPi-Gherkin-Breadboardha/
+ ├── code.py          ← メイン（400行くらい）
+ └── README.md        ← 今読んでるやつ
+```
+## ライセンス
+GNU General Public License v3.0 (GPLv3)  
+→ KMKがGPLv3なのでリポジトリ全体もGPLv3です
+
+## Credits & 感謝
+- PiPiGherkin レイアウト: HASUMI Hitoshi さん（MIT License）
+- KMK Firmware: https://github.com/KMKfw/kmk_firmware
+- CircuitPython: Adafruit
+- 最初に火をつけたCQ出版 Interface 2021年8月号 サポートページ  
+  → https://interface.cqpub.co.jp/2021keybo01/
+- そしてこの「ha」を生み出した運命
+
+質問・「俺も作った！」報告はXのリプかIssuesで待ってます！  
+→ https://x.com/DragonBallEZ
+
+**人類には早すぎるキーボード、いっしょに作ろうぜ！（ha）**
